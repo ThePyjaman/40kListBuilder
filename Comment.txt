@@ -1,0 +1,2 @@
+structure du code :
+    - TP/CoreBundle = layout général du site
