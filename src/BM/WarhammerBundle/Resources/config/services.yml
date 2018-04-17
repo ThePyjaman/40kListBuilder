@@ -1,4 +1,4 @@
 services:
-#    tp_user.example:
-#        class: TP\UserBundle\Example
+#    bm_warhammer.example:
+#        class: BM\WarhammerBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]

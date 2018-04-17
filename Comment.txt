@@ -1,2 +1,6 @@
 structure du code :
     - TP/CoreBundle = layout général du site
+    - TP/UserBundle = implémentation de FOSUserBundle
+    - BM/WarhammerBundle = les entités de warhammer
+
+

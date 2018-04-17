@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new TP\CoreBundle\TPCoreBundle(),
             new TP\UserBundle\TPUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new BM\WarhammerBundle\BMWarhammerBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
