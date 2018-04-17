@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('@TPCore/index.html.twig');
+        return $this->render('@TPCore/layout.html.twig');
     }
 }
