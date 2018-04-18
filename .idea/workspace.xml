@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f37a4c0-bc76-4321-9288-a5815e9b67c8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Comment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Comment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TP/UserBundle/DependencyInjection/Configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP/UserBundle/DependencyInjection/Configuration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TP/UserBundle/DependencyInjection/TPUserExtension.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP/UserBundle/DependencyInjection/TPUserExtension.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TP/UserBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP/UserBundle/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TP/UserBundle/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP/UserBundle/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TP/UserBundle/Resources/config/doctrine/User.orm.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP/UserBundle/Resources/config/doctrine/User.orm.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TP/UserBundle/Resources/config/services.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP/UserBundle/Resources/config/services.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TP/UserBundle/Resources/views/layout.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP/UserBundle/Resources/views/layout.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TP/UserBundle/TPUserBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/TP/UserBundle/TPUserBundle.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/config.php" afterDir="false" />
-    </list>
+    <list default="true" id="7f37a4c0-bc76-4321-9288-a5815e9b67c8" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,14 +33,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Faction_Keyword.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/BM/WarhammerBundle/Entity/Faction_Keyword.php">
+      <file leaf-file-name="BMWarhammerBundle.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BM/WarhammerBundle/BMWarhammerBundle.php">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="Faction_KeywordRepository.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BM/WarhammerBundle/Repository/Faction_KeywordRepository.php">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="Unit.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BM/WarhammerBundle/Entity/Unit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2069">
+              <caret line="151" column="19" selection-start-line="151" selection-start-column="19" selection-end-line="151" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Figurine.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/BM/WarhammerBundle/Entity/Figurine.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2654">
+              <caret line="556" column="22" selection-start-line="556" selection-start-column="22" selection-end-line="556" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Faction.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BM/WarhammerBundle/Entity/Faction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -88,6 +94,8 @@
       <command text="s cache:clear" />
       <command text="s doctrine:schema:update --dump-sql " />
       <command text="s doctrine:schema:update --force" />
+      <command text="s doctrine:schema:update --dump-sql " />
+      <command text="s doctrine:schema:update --force" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
@@ -115,6 +123,11 @@
         <option value="$PROJECT_DIR$/src/TP/UserBundle/TPUserBundle.php" />
         <option value="$PROJECT_DIR$/app/config/security.yml" />
         <option value="$PROJECT_DIR$/Comment.txt" />
+        <option value="$PROJECT_DIR$/src/BM/WarhammerBundle/Entity/Faction.php" />
+        <option value="$PROJECT_DIR$/src/BM/WarhammerBundle/Entity/Role.php" />
+        <option value="$PROJECT_DIR$/src/BM/WarhammerBundle/Entity/Faction_Keyword.php" />
+        <option value="$PROJECT_DIR$/src/BM/WarhammerBundle/Entity/Unit.php" />
+        <option value="$PROJECT_DIR$/src/BM/WarhammerBundle/Entity/Figurine.php" />
       </list>
     </option>
   </component>
@@ -242,16 +255,6 @@
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="40kListBuilder" type="b2602c69:ProjectViewProjectNode" />
-              <item name="40kListBuilder" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="BM" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="WarhammerBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="doctrine" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -294,15 +297,16 @@
       <updated>1523967261730</updated>
       <workItem from="1523967264166" duration="4294000" />
       <workItem from="1523971973874" duration="17967000" />
-      <workItem from="1523992553754" duration="7399000" />
+      <workItem from="1523992553754" duration="20973000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29668000" />
+    <option name="totallyTimeSpent" value="43242000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5008086" side_tool="true" visible="true" weight="0.32991803" />
@@ -468,13 +472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Comment.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BM/WarhammerBundle/Resources/config/doctrine/Faction_Keyword.orm.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -482,11 +479,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/BM/WarhammerBundle/Repository/Faction_keywordRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BM/WarhammerBundle/Resources/config/doctrine/Faction_keyword.orm.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BM/WarhammerBundle/Repository/FactionRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BM/WarhammerBundle/Entity/Role.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Comment.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BM/WarhammerBundle/Repository/Faction_KeywordRepository.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BM/WarhammerBundle/Entity/Faction_Keyword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="70" lean-forward="true" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BM/WarhammerBundle/BMWarhammerBundle.php">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BM/WarhammerBundle/Entity/Faction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BM/WarhammerBundle/Entity/Unit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2069">
+          <caret line="151" column="19" selection-start-line="151" selection-start-column="19" selection-end-line="151" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BM/WarhammerBundle/Entity/Figurine.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2654">
+          <caret line="556" column="22" selection-start-line="556" selection-start-column="22" selection-end-line="556" selection-end-column="22" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
