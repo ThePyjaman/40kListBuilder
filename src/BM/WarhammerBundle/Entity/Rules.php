@@ -5,12 +5,12 @@ namespace BM\WarhammerBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Keyword
+ * Rules
  *
- * @ORM\Table(name="keyword")
- * @ORM\Entity(repositoryClass="BM\WarhammerBundle\Repository\KeywordRepository")
+ * @ORM\Table(name="rules")
+ * @ORM\Entity(repositoryClass="BM\WarhammerBundle\Repository\RulesRepository")
  */
-class Keyword
+class Rules
 {
     /**
      * @var int
@@ -24,9 +24,16 @@ class Keyword
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="name", type="string", length=255, unique=true)
      */
     private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="content", type="text")
+     */
+    private $content;
 
 
     /**
@@ -44,7 +51,7 @@ class Keyword
      *
      * @param string $name
      *
-     * @return Keyword
+     * @return Rules
      */
     public function setName($name)
     {
@@ -62,5 +69,32 @@ class Keyword
     {
         return $this->name;
     }
+
+    /**
+     * Set content
+     *
+     * @param string $content
+     *
+     * @return Rules
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+
+        return $this;
+    }
+
+    /**
+     * Get content
+     *
+     * @return string
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+
+
 }
 

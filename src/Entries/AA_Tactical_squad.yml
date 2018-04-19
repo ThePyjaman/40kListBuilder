@@ -1,0 +1,10 @@
+unit_id: 1
+composition:
+    Space_Marine:
+        weapons: {'Bolter','Bolt_pistol'}
+    Space_marine:
+        weapons: {'Bolter','Bolt_pistol'}
+    Space_Marine:
+        weapons: {'Bolter','Bolt_pistol'}
+    Space_marine:
+        weapons: {'Bolter','Bolt_pistol'}

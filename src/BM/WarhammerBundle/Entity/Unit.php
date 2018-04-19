@@ -24,7 +24,7 @@ class Unit
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="name", type="string", length=255, unique=true)
      */
     private $name;
 
@@ -38,7 +38,7 @@ class Unit
     /**
      * @var string
      *
-     * @ORM\Column(name="datasheet", type="string", length=255)
+     * @ORM\Column(name="datasheet", type="string", length=255, nullable=true)
      */
     private $datasheet;
 
@@ -137,11 +137,11 @@ class Unit
     /**
      * Set faction_keywords
      *
-     * @param array $keywords
+     * @param array $faction_keywords
      *
      * @return Unit
      */
-    public function setFactionKeywords($faction_keywords)
+    public function setFaction_keywords($faction_keywords)
     {
         $this->faction_keywords = $faction_keywords;
 
@@ -153,7 +153,7 @@ class Unit
      *
      * @return array
      */
-    public function getFactionKeywords()
+    public function getFaction_keywords()
     {
         return $this->faction_keywords;
     }

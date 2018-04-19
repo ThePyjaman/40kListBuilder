@@ -1,0 +1,42 @@
+{% extends "@TPCore/layout.html.twig" %}
+{% block body %}
+
+    <h4>{{ figurine.name }}</h4>
+    <table border = '1px solid black'>
+        <tr>
+            <td>M</td>
+            <td>CC</td>
+            <td>CT</td>
+            <td>F</td>
+            <td>E</td>
+            <td>PV</td>
+            <td>A</td>
+            <td>Cd</td>
+            <td>Sv</td>
+        </tr>
+        <tr>
+            <td>{{ figurine.m }}</td>
+            <td>{{ figurine.cc }}+</td>
+            <td>{{ figurine.ct }}+</td>
+            <td>{{ figurine.f }}</td>
+            <td>{{ figurine.e }}</td>
+            <td>{{ figurine.pv }}</td>
+            <td>{{ figurine.a }}</td>
+            <td>{{ figurine.cd }}</td>
+            <td>{{ figurine.sv }}+</td>
+        </tr>
+
+    </table>
+
+    {% for rule in figurine.rules %}
+        <strong>{{ rule.name }} :</strong> {{ rule.content }}<br/>
+    {% endfor %}
+
+    <table border = '1px solid black'>
+        <tr>
+            {% for keyword in figurine.type_keywords %}
+                <td>{{ keyword.name }}</td>
+            {% endfor %}
+        </tr>
+    </table>
+{% endblock %}

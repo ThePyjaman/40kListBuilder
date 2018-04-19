@@ -1,3 +1,6 @@
 bm_warhammer_homepage:
-    path:     /
-    defaults: { _controller: BMWarhammerBundle:Default:index }
+    path:     /viewfig/{id}
+    defaults:
+        _controller: BMWarhammerBundle:Default:viewFigurine
+    requirements:
+        page: '\d+'

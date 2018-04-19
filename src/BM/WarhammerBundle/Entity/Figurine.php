@@ -12,6 +12,28 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Figurine
 {
+
+    //JOINTURES
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Type")
+     * @ORM\JoinTable(name="type_association",
+     *      joinColumns={@ORM\JoinColumn(name="figurine_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="type_id", referencedColumnName="id")}
+     *      )
+     */
+    private $type_keywords;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Rules")
+     * @ORM\JoinTable(name="rules_association",
+     *      joinColumns={@ORM\JoinColumn(name="figurine_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="type_id", referencedColumnName="id")}
+     *      )
+     */
+    private $rules;
+
+
     /**
      * @var int
      *
@@ -24,101 +46,94 @@ class Figurine
     /**
      * @var string
      *
-     * @ORM\Column(name="name", type="string", length=255)
+     * @ORM\Column(name="name", type="string", length=255, unique=true)
      */
     private $name;
 
-    /**
-     * @var array
-     *
-     * @ORM\Column(name="mouvement", type="simple_array")
-     */
-    private $mouvement;
 
     /**
-     * @var array
+     * @var int
      *
-     * @ORM\Column(name="cc", type="simple_array")
+     * @ORM\Column(name="m", type="integer", nullable=true)
+     */
+    private $m;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="cc", type="integer", nullable=true)
      */
     private $cc;
 
     /**
-     * @var array
+     * @var int
      *
-     * @ORM\Column(name="ct", type="simple_array")
+     * @ORM\Column(name="ct", type="integer", nullable=true)
      */
     private $ct;
 
     /**
-     * @var array
+     * @var int
      *
-     * @ORM\Column(name="f", type="simple_array")
+     * @ORM\Column(name="f", type="integer", nullable=true)
      */
     private $f;
 
     /**
-     * @var array
+     * @var int
      *
-     * @ORM\Column(name="e", type="simple_array")
+     * @ORM\Column(name="e", type="integer", nullable=true)
      */
     private $e;
 
     /**
-     * @var array
+     * @var int
      *
-     * @ORM\Column(name="pv", type="simple_array")
+     * @ORM\Column(name="pv", type="integer", nullable=true)
      */
     private $pv;
 
-
     /**
-     * @var array
+     * @var int
      *
-     * @ORM\Column(name="a", type="simple_array")
+     * @ORM\Column(name="a", type="integer", nullable=true)
      */
     private $a;
 
     /**
-     * @var array
+     * @var int
      *
-     * @ORM\Column(name="cd", type="simple_array")
+     * @ORM\Column(name="cd", type="integer", nullable=true)
      */
     private $cd;
 
     /**
-     * @var array
+     * @var int
      *
-     * @ORM\Column(name="svg", type="simple_array")
+     * @ORM\Column(name="sv", type="integer", nullable=true)
      */
-    private $svg;
+    private $sv;
 
     /**
-     * @var array
+     * @var int
      *
-     * @ORM\Column(name="fnp", type="simple_array")
+     * @ORM\Column(name="fnp", type="integer", nullable=true)
      */
     private $fnp;
 
     /**
-     * @var array
+     * @var int
      *
-     * @ORM\Column(name="cast", type="simple_array")
+     * @ORM\Column(name="psy", type="integer", nullable=true)
      */
-    private $cast;
+    private $psy;
 
     /**
-     * @var array
+     * @var int
      *
-     * @ORM\Column(name="deny", type="simple_array")
+     * @ORM\Column(name="deny", type="integer", nullable=true)
      */
     private $deny;
-
-    /**
-     * @var array
-     *
-     * @ORM\Column(name="rules", type="array")
-     */
-    private $rules;
 
     /**
      * @var int
@@ -127,16 +142,12 @@ class Figurine
      */
     private $price;
 
-
     /**
-     * @ORM\ManyToMany(targetEntity="Keyword")
-     * @ORM\JoinTable(name="type_association",
-     *      joinColumns={@ORM\JoinColumn(name="type_id", referencedColumnName="id")},
-     *      inverseJoinColumns={@ORM\JoinColumn(name="figurine_id", referencedColumnName="id")}
-     *      )
+     * @var int
+     *
+     * @ORM\Column(name="has_degressive_profile", type="boolean")
      */
-    private $type_keywords;
-
+    private $hasDegressiveProfile;
 
 
     /**
@@ -150,11 +161,251 @@ class Figurine
     }
 
     /**
+     * Set m
+     *
+     * @param integer $m
+     *
+     * @return Figurine
+     */
+    public function setM($m)
+    {
+        $this->m = $m;
+
+        return $this;
+    }
+
+    /**
+     * Get m
+     *
+     * @return int
+     */
+    public function getM()
+    {
+        return $this->m;
+    }
+
+    /**
+     * Set cc
+     *
+     * @param integer $cc
+     *
+     * @return Figurine
+     */
+    public function setCc($cc)
+    {
+        $this->cc = $cc;
+
+        return $this;
+    }
+
+    /**
+     * Get cc
+     *
+     * @return int
+     */
+    public function getCc()
+    {
+        return $this->cc;
+    }
+
+    /**
+     * Set ct
+     *
+     * @param integer $ct
+     *
+     * @return Figurine
+     */
+    public function setCt($ct)
+    {
+        $this->ct = $ct;
+
+        return $this;
+    }
+
+    /**
+     * Get ct
+     *
+     * @return int
+     */
+    public function getCt()
+    {
+        return $this->ct;
+    }
+
+    /**
+     * Set f
+     *
+     * @param integer $f
+     *
+     * @return Figurine
+     */
+    public function setF($f)
+    {
+        $this->f = $f;
+
+        return $this;
+    }
+
+    /**
+     * Get f
+     *
+     * @return int
+     */
+    public function getF()
+    {
+        return $this->f;
+    }
+
+    /**
+     * Set e
+     *
+     * @param integer $e
+     *
+     * @return Figurine
+     */
+    public function setE($e)
+    {
+        $this->e = $e;
+
+        return $this;
+    }
+
+    /**
+     * Get e
+     *
+     * @return int
+     */
+    public function getE()
+    {
+        return $this->e;
+    }
+
+    /**
+     * Set pv
+     *
+     * @param integer $pv
+     *
+     * @return Figurine
+     */
+    public function setPv($pv)
+    {
+        $this->pv = $pv;
+
+        return $this;
+    }
+
+    /**
+     * Get pv
+     *
+     * @return int
+     */
+    public function getPv()
+    {
+        return $this->pv;
+    }
+
+    /**
+     * Set a
+     *
+     * @param integer $a
+     *
+     * @return Figurine
+     */
+    public function setA($a)
+    {
+        $this->a = $a;
+
+        return $this;
+    }
+
+    /**
+     * Get a
+     *
+     * @return int
+     */
+    public function getA()
+    {
+        return $this->a;
+    }
+
+    /**
+     * Set cd
+     *
+     * @param integer $cd
+     *
+     * @return Figurine
+     */
+    public function setCd($cd)
+    {
+        $this->cd = $cd;
+
+        return $this;
+    }
+
+    /**
+     * Get cd
+     *
+     * @return int
+     */
+    public function getCd()
+    {
+        return $this->cd;
+    }
+
+    /**
+     * Set sv
+     *
+     * @param integer $sv
+     *
+     * @return Figurine
+     */
+    public function setSv($sv)
+    {
+        $this->sv = $sv;
+
+        return $this;
+    }
+
+    /**
+     * Get sv
+     *
+     * @return int
+     */
+    public function getSv()
+    {
+        return $this->sv;
+    }
+
+    /**
+     * Set fnp
+     *
+     * @param integer $fnp
+     *
+     * @return Figurine
+     */
+    public function setFnp($fnp)
+    {
+        $this->fnp = $fnp;
+
+        return $this;
+    }
+
+    /**
+     * Get fnp
+     *
+     * @return int
+     */
+    public function getFnp()
+    {
+        return $this->fnp;
+    }
+
+    /**
      * Set name
      *
      * @param string $name
      *
-     * @return Unit
+     * @return Figurine
      */
     public function setName($name)
     {
@@ -174,273 +425,33 @@ class Figurine
     }
 
     /**
-     * Set mouvement
+     * Set psy
      *
-     * @param array $mouvement
+     * @param integer $psy
      *
      * @return Figurine
      */
-    public function setMouvement($mouvement)
+    public function setPsy($psy)
     {
-        $this->mouvement = $mouvement;
+        $this->psy = $psy;
 
         return $this;
     }
 
     /**
-     * Get mouvement
+     * Get psy
      *
-     * @return array
+     * @return int
      */
-    public function getMouvement()
+    public function getPsy()
     {
-        return $this->mouvement;
-    }
-
-    /**
-     * Set cc
-     *
-     * @param array $cc
-     *
-     * @return Figurine
-     */
-    public function setCc($cc)
-    {
-        $this->cc = $cc;
-
-        return $this;
-    }
-
-    /**
-     * Get cc
-     *
-     * @return array
-     */
-    public function getCc()
-    {
-        return $this->cc;
-    }
-
-    /**
-     * Set ct
-     *
-     * @param array $ct
-     *
-     * @return Figurine
-     */
-    public function setCt($ct)
-    {
-        $this->ct = $ct;
-
-        return $this;
-    }
-
-    /**
-     * Get ct
-     *
-     * @return array
-     */
-    public function getCt()
-    {
-        return $this->ct;
-    }
-
-    /**
-     * Set f
-     *
-     * @param array $f
-     *
-     * @return Figurine
-     */
-    public function setF($f)
-    {
-        $this->f = $f;
-
-        return $this;
-    }
-
-    /**
-     * Get f
-     *
-     * @return array
-     */
-    public function getF()
-    {
-        return $this->f;
-    }
-
-    /**
-     * Set e
-     *
-     * @param array $e
-     *
-     * @return Figurine
-     */
-    public function setE($e)
-    {
-        $this->e = $e;
-
-        return $this;
-    }
-
-    /**
-     * Get e
-     *
-     * @return array
-     */
-    public function getE()
-    {
-        return $this->e;
-    }
-
-    /**
-     * Set pv
-     *
-     * @param array $pv
-     *
-     * @return Figurine
-     */
-    public function setPv($pv)
-    {
-        $this->pv = $pv;
-
-        return $this;
-    }
-
-    /**
-     * Get pv
-     *
-     * @return array
-     */
-    public function getPv()
-    {
-        return $this->pv;
-    }
-
-    /**
-     * Set aa
-     *
-     * @param array $aa
-     *
-     * @return Figurine
-     */
-    public function setA($a)
-    {
-        $this->aa = $a;
-
-        return $this;
-    }
-
-    /**
-     * Get a
-     *
-     * @return array
-     */
-    public function getA()
-    {
-        return $this->a;
-    }
-
-    /**
-     * Set cd
-     *
-     * @param array $cd
-     *
-     * @return Figurine
-     */
-    public function setCd($cd)
-    {
-        $this->cd = $cd;
-
-        return $this;
-    }
-
-    /**
-     * Get cd
-     *
-     * @return array
-     */
-    public function getCd()
-    {
-        return $this->cd;
-    }
-
-    /**
-     * Set svg
-     *
-     * @param array $svg
-     *
-     * @return Figurine
-     */
-    public function setSvg($svg)
-    {
-        $this->svg = $svg;
-
-        return $this;
-    }
-
-    /**
-     * Get svg
-     *
-     * @return array
-     */
-    public function getSvg()
-    {
-        return $this->svg;
-    }
-
-    /**
-     * Set fnp
-     *
-     * @param array $fnp
-     *
-     * @return Figurine
-     */
-    public function setFnp($fnp)
-    {
-        $this->fnp = $fnp;
-
-        return $this;
-    }
-
-    /**
-     * Get fnp
-     *
-     * @return array
-     */
-    public function getFnp()
-    {
-        return $this->fnp;
-    }
-
-    /**
-     * Set cast
-     *
-     * @param array $cast
-     *
-     * @return Figurine
-     */
-    public function setCast($cast)
-    {
-        $this->cast = $cast;
-
-        return $this;
-    }
-
-    /**
-     * Get cast
-     *
-     * @return array
-     */
-    public function getCast()
-    {
-        return $this->cast;
+        return $this->psy;
     }
 
     /**
      * Set deny
      *
-     * @param array $deny
+     * @param integer $deny
      *
      * @return Figurine
      */
@@ -454,11 +465,84 @@ class Figurine
     /**
      * Get deny
      *
-     * @return array
+     * @return int
      */
     public function getDeny()
     {
         return $this->deny;
+    }
+
+    /**
+     * Set price
+     *
+     * @param integer $price
+     *
+     * @return Figurine
+     */
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Get price
+     *
+     * @return int
+     */
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    /**
+     * Set hasDegressiveProfile
+     *
+     * @param boolean $hasDegressiveProfile
+     *
+     * @return Figurine
+     */
+    public function setHasDegressiveProfile($hasDegressiveProfile)
+    {
+        $this->hasDegressiveProfile = $hasDegressiveProfile;
+
+        return $this;
+    }
+
+    /**
+     * Get hasDegressiveProfile
+     *
+     * @return boolean
+     */
+    public function getHasDegressiveProfile()
+    {
+        return $this->hasDegressiveProfile;
+    }
+
+
+    /**
+     * Set faction_keywords
+     *
+     * @param array $type_keywords
+     *
+     * @return Figurine
+     */
+    public function setType_keywords($type_keywords)
+    {
+        $this->type_keywords = $type_keywords;
+
+        return $this;
+    }
+
+    /**
+     * Get type_keywords
+     *
+     * @return array
+     */
+    public function getType_keywords()
+    {
+        return $this->type_keywords;
     }
 
     /**
@@ -486,48 +570,5 @@ class Figurine
     }
 
 
-    /**
-     * Get price
-     *
-     * @return int
-     */
-    public function getPrice()
-    {
-        return $this->price;
-    }
-
-    /**
-     * Set price
-     *
-     * @param int $price
-     *
-     * Return Figurine
-     */
-    public function setPrice($price)
-    {
-        $this->price = $price;
-
-        return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getTypeKeywords()
-    {
-        return $this->type_keywords;
-    }
-
-    /**
-     * @param mixed $type_keywords
-     *
-     * Return Figurine
-     */
-    public function setTypeKeywords($type_keywords)
-    {
-        $this->type_keywords = $type_keywords;
-
-        return $this;
-    }
 }
 
