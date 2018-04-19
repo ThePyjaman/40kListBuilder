@@ -22,44 +22,51 @@ class Figurine
     private $id;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
+
+    /**
      * @var array
      *
-     * @ORM\Column(name="mouvement", type="array")
+     * @ORM\Column(name="mouvement", type="simple_array")
      */
     private $mouvement;
 
     /**
      * @var array
      *
-     * @ORM\Column(name="cc", type="array")
+     * @ORM\Column(name="cc", type="simple_array")
      */
     private $cc;
 
     /**
      * @var array
      *
-     * @ORM\Column(name="ct", type="array")
+     * @ORM\Column(name="ct", type="simple_array")
      */
     private $ct;
 
     /**
      * @var array
      *
-     * @ORM\Column(name="f", type="array")
+     * @ORM\Column(name="f", type="simple_array")
      */
     private $f;
 
     /**
      * @var array
      *
-     * @ORM\Column(name="e", type="array")
+     * @ORM\Column(name="e", type="simple_array")
      */
     private $e;
 
     /**
      * @var array
      *
-     * @ORM\Column(name="pv", type="array")
+     * @ORM\Column(name="pv", type="simple_array")
      */
     private $pv;
 
@@ -67,42 +74,42 @@ class Figurine
     /**
      * @var array
      *
-     * @ORM\Column(name="a", type="array")
+     * @ORM\Column(name="a", type="simple_array")
      */
     private $a;
 
     /**
      * @var array
      *
-     * @ORM\Column(name="cd", type="array")
+     * @ORM\Column(name="cd", type="simple_array")
      */
     private $cd;
 
     /**
      * @var array
      *
-     * @ORM\Column(name="svg", type="array")
+     * @ORM\Column(name="svg", type="simple_array")
      */
     private $svg;
 
     /**
      * @var array
      *
-     * @ORM\Column(name="fnp", type="array")
+     * @ORM\Column(name="fnp", type="simple_array")
      */
     private $fnp;
 
     /**
      * @var array
      *
-     * @ORM\Column(name="cast", type="array")
+     * @ORM\Column(name="cast", type="simple_array")
      */
     private $cast;
 
     /**
      * @var array
      *
-     * @ORM\Column(name="deny", type="array")
+     * @ORM\Column(name="deny", type="simple_array")
      */
     private $deny;
 
@@ -120,23 +127,6 @@ class Figurine
      */
     private $price;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="Weapon")
-     * @ORM\JoinTable(name="weapon_association",
-     *      joinColumns={@ORM\JoinColumn(name="weapon_id", referencedColumnName="id")},
-     *      inverseJoinColumns={@ORM\JoinColumn(name="figurine_id", referencedColumnName="id")}
-     *      )
-     */
-    private $weapons;
-
-    /**
-     * @ORM\ManyToMany(targetEntity="Gear")
-     * @ORM\JoinTable(name="gear_association",
-     *      joinColumns={@ORM\JoinColumn(name="gear_id", referencedColumnName="id")},
-     *      inverseJoinColumns={@ORM\JoinColumn(name="figurine_id", referencedColumnName="id")}
-     *      )
-     */
-    private $gear;
 
     /**
      * @ORM\ManyToMany(targetEntity="Keyword")
@@ -157,6 +147,30 @@ class Figurine
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Unit
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
     }
 
     /**
@@ -471,53 +485,6 @@ class Figurine
         return $this->rules;
     }
 
-    /**
-     * Set weapons
-     *
-     * @param array $weapons
-     *
-     * @return Figurine
-     */
-    public function setWeapons($weapons)
-    {
-        $this->weapons = $weapons;
-
-        return $this;
-    }
-
-    /**
-     * Get weapons
-     *
-     * @return array
-     */
-    public function getWeapons()
-    {
-        return $this->weapons;
-    }
-
-    /**
-     * Set gear
-     *
-     * @param array $gear
-     *
-     * @return Figurine
-     */
-    public function setGear($gear)
-    {
-        $this->gear = $gear;
-
-        return $this;
-    }
-
-    /**
-     * Get gear
-     *
-     * @return array
-     */
-    public function getGear()
-    {
-        return $this->gear;
-    }
 
     /**
      * Get price
